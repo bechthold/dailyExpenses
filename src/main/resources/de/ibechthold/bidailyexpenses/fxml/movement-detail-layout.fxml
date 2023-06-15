@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="463.0" prefWidth="400.0" stylesheets="@../css/styling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.ibechthold.bidailyexpenses.gui.MovementDetailController">
+   <children>
+      <VBox layoutX="30.0" layoutY="20.0" prefHeight="277.0" prefWidth="361.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label fx:id="lblAmount" text="Expense">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAmount" maxWidth="400.0" prefHeight="30.0" prefWidth="400.0" stylesheets="@../css/styling.css">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Category">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboBoxMovementCategory" prefHeight="30.0" prefWidth="400.0" stylesheets="@../css/styling.css">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label text="Description">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtDescription" maxWidth="400.0" prefHeight="30.0" prefWidth="394.0" stylesheets="@../css/styling.css">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <children>
+                        <DatePicker fx:id="datePicker" editable="false" prefWidth="130.0" promptText="Date" stylesheets="@../css/styling.css" />
+                        <ComboBox fx:id="comboBoxHours" focusTraversable="false" prefHeight="19.0" prefWidth="70.0" promptText="HH" stylesheets="@../css/styling.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="comboBoxMinutes" focusTraversable="false" prefWidth="70.0" promptText="MM" stylesheets="@../css/styling.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+            <HBox>
+               <children>
+                  <Button fx:id="btnDeleteMovement" alignment="CENTER" mnemonicParsing="false" onAction="#deleteMovement" prefHeight="39.0" prefWidth="178.0" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnSaveMovement" alignment="CENTER" mnemonicParsing="false" onAction="#saveMovement" prefHeight="39.0" prefWidth="165.0" text="Save" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
